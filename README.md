@@ -24,7 +24,8 @@ A SaaS platform updates brand pricing data weekly, delivering insights through a
 - Data Analysis & Cleaning: Python (Pandas)
 - Data Visualization: Tableau
 
-
+## Tableau Dashboard Link
+**Link:** [https://public.tableau.com/app/profile/afaq.ahmad.farooq/viz/WeeklyPriceChangeAnomalyDashboard/Dashboard?publish=yes]
 
 
 
