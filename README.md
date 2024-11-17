@@ -27,5 +27,6 @@ A SaaS platform updates brand pricing data weekly, delivering insights through a
 ## Tableau Dashboard Link
 **Link:** [https://public.tableau.com/app/profile/afaq.ahmad.farooq/viz/WeeklyPriceChangeAnomalyDashboard/Dashboard?publish=yes]
 
+![image](dashboard.png)
 
 
