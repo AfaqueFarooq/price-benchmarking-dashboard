@@ -1,0 +1,3222 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Select Country' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;USA (tax free)&quot;'>
+        <calculation class='tableau' formula='&quot;USA (tax free)&quot;' />
+        <members>
+          <member value='&quot;France&quot;' />
+          <member value='&quot;Australia&quot;' />
+          <member value='&quot;United Kingdom&quot;' />
+          <member value='&quot;USA (tax free)&quot;' />
+          <member value='&quot;Japan&quot;' />
+          <member value='&quot;Hong Kong&quot;' />
+          <member value='&quot;China&quot;' />
+          <member value='&quot;Korea&quot;' />
+          <member value='&quot;Korea DF&quot;' />
+          <member value='&quot;Hainan DF&quot;' />
+          <member value='&quot;United Arab Emirates&quot;' />
+          <member value='&quot;Canada&quot;' />
+          <member value='&quot;Macao&quot;' />
+          <member value='&quot;Mexico&quot;' />
+          <member value='&quot;Saudi Arabia&quot;' />
+          <member value='&quot;Singapore&quot;' />
+          <member value='&quot;Thailand&quot;' />
+          <member value='&quot;Taiwan&quot;' />
+        </members>
+      </column>
+      <column caption='Select Brand' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bottega Veneta&quot;'>
+        <calculation class='tableau' formula='&quot;Bottega Veneta&quot;' />
+        <members>
+          <member value='&quot;Alexander McQueen&quot;' />
+          <member value='&quot;Balenciaga&quot;' />
+          <member value='&quot;Bottega Veneta&quot;' />
+          <member value='&quot;Burberry&quot;' />
+          <member value='&quot;Celine&quot;' />
+          <member value='&quot;Chanel&quot;' />
+          <member value='&quot;Dior&quot;' />
+          <member value='&quot;Fendi&quot;' />
+          <member value='&quot;Goyard&quot;' />
+          <member value='&quot;Gucci&quot;' />
+          <member value='&quot;Jacquemus&quot;' />
+          <member value='&quot;Loewe&quot;' />
+          <member value='&quot;Louis Vuitton&quot;' />
+          <member value='&quot;Prada&quot;' />
+          <member value='&quot;Saint Laurent&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='Sheet1 (Processed_data)' inline='true' name='federated.1lxame813gh7p710zvrcm04mo84e' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Processed_data' name='excel-direct.02sqe0d06pkpc9106p69o109t16p'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/afaque/data_analyst_case_study/Processed_data.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.02sqe0d06pkpc9106p69o109t16p' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:K4843:no:A1:K4843:0' header='yes' outcome='2'>
+            <column datatype='integer' name='Unnamed: 0' ordinal='0' />
+            <column datatype='string' name='Brand_w' ordinal='1' />
+            <column datatype='string' name='Name_w' ordinal='2' />
+            <column datatype='string' name='SKU' ordinal='3' />
+            <column datatype='string' name='Country' ordinal='4' />
+            <column datatype='integer' name='Price_w' ordinal='5' />
+            <column datatype='string' name='Brand_w1' ordinal='6' />
+            <column datatype='string' name='Name_w1' ordinal='7' />
+            <column datatype='integer' name='Price_w1' ordinal='8' />
+            <column datatype='integer' name='Price_Diff' ordinal='9' />
+            <column datatype='integer' name='Price Pct Change' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K4843:no:A1:K4843:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unnamed: 0</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Unnamed: 0]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Unnamed: 0</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Brand_w</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Brand_w]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Brand_w</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name_w</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name_w]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Name_w</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SKU</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SKU]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>SKU</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price_w</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Price_w]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Price_w</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Brand_w1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Brand_w1]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Brand_w1</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name_w1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name_w1]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Name_w1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price_w1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Price_w1]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Price_w1</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price_Diff</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Price_Diff]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Price_Diff</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price Pct Change</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Price Pct Change]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Price Pct Change</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956459102209:qk]&quot;' value='Current Week(Null Count)' />
+        </aliases>
+      </column>
+      <column caption='Brand w1' datatype='string' name='[Brand_w1]' role='dimension' type='nominal' />
+      <column caption='Brand w' datatype='string' name='[Brand_w]' role='dimension' type='nominal' />
+      <column caption='Current Week(Null Count)' datatype='integer' name='[Calculation_2738258956459102209]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IF [Price_w]=0 THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='Last Week(Null Count)' datatype='integer' name='[Calculation_2738258956460986370]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [Price_w1]=0 then 1 else 0 END' />
+      </column>
+      <column caption='Country-Brand-Calculated-Field' datatype='string' name='[Calculation_2766758297880793089]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 2] = [Brand_w] and [Parameters].[Parameter 1]= [Country] THEN [Name_w]&#10;ELSE NULL&#10;END' />
+      </column>
+      <column caption='Prize-Diff-Color' datatype='string' name='[Calculation_2824460668130164736]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='if [Price_Diff] &gt;= 0 then &quot;Positive&quot; else &quot;Negative&quot; end' />
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Name w1' datatype='string' name='[Name_w1]' role='dimension' type='nominal' />
+      <column caption='Name w' datatype='string' name='[Name_w]' role='dimension' type='nominal' />
+      <column caption='Price Diff' datatype='integer' name='[Price_Diff]' role='measure' type='quantitative' />
+      <column caption='Price w1' datatype='integer' name='[Price_w1]' role='measure' type='quantitative' />
+      <column caption='Price w' datatype='integer' name='[Price_w]' role='measure' type='quantitative' />
+      <column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_D9B36D356705411CA4C9233B965D4DFF]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_2766758297880793089]' derivation='None' name='[none:Calculation_2766758297880793089:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_2824460668130164736]' derivation='None' name='[none:Calculation_2824460668130164736:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Name_w]' derivation='None' name='[none:Name_w:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_2738258956459102209]' derivation='Sum' name='[sum:Calculation_2738258956459102209:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/8t/1455nt6570bcl_lflj3598rm0000gn/T/tableau-temp/#TableauTemp_17855jl1ape7241bx0s6k08zrxul.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/14/2024 05:09:18 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Unnamed: 0</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Unnamed: 0]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unnamed: 0</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4842</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Brand_w</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Brand_w]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Brand_w</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name_w</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name_w]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name_w</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>261</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SKU</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SKU]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SKU</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>292</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price_w</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Price_w]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Price_w</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1096</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Brand_w1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Brand_w1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Brand_w1</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name_w1</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name_w1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name_w1</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>259</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price_w1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Price_w1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Price_w1</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1138</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price_Diff</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Price_Diff]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Price_Diff</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price Pct Change</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Price Pct Change]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Price Pct Change</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Sheet1_D9B36D356705411CA4C9233B965D4DFF]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.841727' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.158273' rowDisplayCount='100' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Name_w:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Aphrodite small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Chanel 19 maxi handbag, Shiny lambskin, gold-tone, silver-tone &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Fendi Sunshine Large&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Gucci Blondie mini shoulder bag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Large 2.55 Handbag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Le grand Chiquito&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;medium niki  in vintage leather&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Mini Lady Dior Bag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Neverfull MM&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Prada Cleo brushed leather shoulder bag with flap&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Small Dior Bobby Bag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Teen Jodie&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Baguette&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Capucines MM&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Dionysus GG Supreme super mini bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Gucci Attache small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;hourglass small handbag crocodile embossed&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;large sunset  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Medium Dior Caro Bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Mini Dauphine&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Nano Luggage bag in drummed calfskin&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Paseo bag in shiny nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Small 16 Bag in satinated calfskin&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;small loulou  in quilted leather&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Women’s Designer Bags&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Alma BB&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;By The Way Mini&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Dionysus small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gucci Bamboo 1947 mini top handle bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Jackie 1961 small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;le cagole small bucket bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Medium Lady D-Lite Bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mini Frances Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;neo classic medium handbag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;PETIT FLOT&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Small Cabat&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Small Prada Symbole embroidered fabric handbag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Chain Cassette&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Classic handbag, Lambskin &amp; gold-tone metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Fendigraphy Small&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Gucci Diana jumbo GG small tote bag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Large Dior Book Tote&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Maxi 2.55 Handbag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;medium sunset  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Mini Puffer Goya bag in shiny nappa lambskin&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Ophidia GG medium tote bag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Re-Nylon Prada Re-Edition 2000 mini-bag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Small Hammock bag in soft grained calfskin&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;The Peak Bag&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Ava Bag in Triomphe Canvas and calfskin&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Chanel 22 handbag, Shiny calfskin &amp; gold-tone metal , black — Fashion&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Fendi Sunshine Medium&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Gucci Blondie shoulder bag&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Large boy chanel handbag, Calfskin &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Lola Clutch in Black - Women&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Medium Prada Galleria Saffiano leather bag&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mini Lola Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;niki baby  in vintage leather&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Prada Moon padded nappa-leather bag&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Small Dior Book Tote&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Teen Triomphe Bag in shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Alma PM&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Embroidered jacquard fabric mini-bag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Fendi First Medium&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gucci Bamboo 1947 small top handle bag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Jewelled Satchel&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;le cagole xs bucket bag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Medium Lady Dior Bag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mini Gate Dual bag in soft calfskin and jacquard&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;neo classic small handbag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Pouch&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Small Cassette&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;small puffer  in quilted nappa leather&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;0&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Capucines BB&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Dauphine MM&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;GG Marmont small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Gucci Horsebit 1955 shoulder bag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Large Prada Galleria Saffiano leather bag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Medium Dior Bobby Bag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Mini Belt bag in grained calfskin&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Ophidia GG small tote bag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Ophidia medium tote bag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Small Lola Camera Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;uptown chain wallet in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Baguette Large&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;cassandre matelassé chain wallet in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Dionysus leather mini bag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Gucci Bamboo 1947 jumbo GG mini bag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;icare maxi shopping bag in quilted lambskin&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;le 5 à 7  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;medium envelope  in quilted grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Mini Dior Book Tote&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;neo cagole city handbag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Saddle Micro Bag with Strap&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Small Arco Tote Bag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Small Padded Cassette&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;XL Flamenco bag in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Chanel 19 handbag, Shiny lambskin, gold-tone, silver-tone &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Coussin BB&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;GG Marmont medium shoulder bag&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Gucci Horsebit 1955 medium bag&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Large Lady Dior Bag&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Medium Cabas Phantom in soft grained calfskin&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Mini Arco Tote Bag&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Mini TB Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Peekaboo Iseeu Small&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Saddle Bag with Strap&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Small Lady D-Joy Bag&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Twist MM&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Amazona 16 Square bag in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;envelope chain wallet in mix matelassé grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Fendi First Midi&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Gucci Blondie medium bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Lady D-Joy Micro Bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Le Chiquito&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Medium Lady D-Joy Bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mini Jewelled Satchel&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;NéoNoé MM&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Prada Cleo brushed leather mini bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Small classic handbag, Grained calfskin &amp; gold-tone metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;small sac de jour  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;BESACE CLEA in shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Classique 16 Bag in satinated calfskin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Gucci Diana medium tote bag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Large Dior Caro Bag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Maxi Classic Handbag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Micro Belt bag in grained calfskin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Mini Puzzle bag in satin calfskin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Mon Tresor&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Ophidia GG small handbag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;rive gauche tote  in canvas&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Small Jodie&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;The Peak Bag Small&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Boy chanel handbag, Calfskin &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Classique Triomphe Bag in shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Gucci Diana mini tote bag&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;large envelope  in quilted grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Medium Andiamo&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Micro Luggage handbag in drummed calfskin&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Mini Saddle Bag with Strap&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Nano Fendigraphy&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Ophidia GG small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;sac de jour baby  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;small kate  in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;The Slash Bag&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;CABAS 16 in SMOOTH CALFSKIN&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Coussin MM&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;GG Marmont mini shoulder bag&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Gucci Horsebit 1955 mini bag&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;large loulou  in quilted leather&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Medium Cabat&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MINI AVA in Triomphe canvas and calfskin&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MINI TRIOMPHE in Shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Ophidia large tote bag&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Peekaboo Mini&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Small Lola Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Twist PM&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2.55 Handbag, Aged calfskin &amp; gold-tone metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Capucines Mini&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Dionysus GG Supreme mini bag&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Gucci Attache medium shoulder bag&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;hourglass small handbag box&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Large Prada Symbole embroidered fabric handbag&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Medium Dior Book Tote&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Mini Cabat&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Ophidia GG soft medium tote&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Padded Cassette&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Small Loop Camera Bag&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Wallet on Chain TRIOMPHE in Shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;cassandre matelassé envelope chain wallet in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Chanel 22 large handbag, Shiny calfskin &amp; gold-tone metal , black — Fashion&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Fendi Sunshine Small&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Gucci Blondie top-handle bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Large Classic Handbag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;lou  in quilted leather&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;medium puffer  in quilted nappa leather&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mini Loop Camera Bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;OnTheGo MM&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Prada Re-Edition 2005 Saffiano leather bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Small Dior Caro Bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;The Jewelled Hobo Bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Amazona 23 bag in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Chanel 19 large handbag, Shiny lambskin, gold-tone, silver-tone &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Fendi First Small&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Gucci Blondie mini bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Lady Dior Micro Bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Le Chiquito long&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;medium loulou  in quilted leather&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mini Jodie&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Neverfull GM&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Prada Cleo brushed leather shoulder bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Small Dionysus top handle bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Small TB Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;30 Montaigne Bag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Baguette Mini&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Dionysus leather super mini bag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Gucci Bamboo 1947 jumbo GG small top handle bag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Jackie 1961 medium shoulder bag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Le Bambino&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Medium Jodie&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Mini Flamenco clutch in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;neo cagole city small handbag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;SAINT LOUIS&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Small boy chanel handbag, Calfskin &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Small Paseo bag in shiny nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;CHAIN SHOULDER BAG triomphe in shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Compact Hammock bag in soft grained calfskin&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Flamenco clutch in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Gucci Diana small tote bag&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Large Flamenco clutch in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Medium Arco Tote Bag&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MINI 16 in satinated calfskin&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Mini Sardine&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Peekaboo ISeeU Medium&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SAC MALLE MINAUDIERE&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Small Lady Dior My ABCDior Bag&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;The Slash Clutch&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Cassette&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Chanel 22 small handbag, Shiny calfskin &amp; gold-tone metal , light yellow — Fashion&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Fendigraphy Medium&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Gucci Diana jumbo GG mini tote bag&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Large Dior Bobby Bag&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;loulou toy strap bag in quilted \&quot;y\&quot; leather&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Medium Saffiano Leather Prada Matinée Bag&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Mini Pouch&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Onthego PM&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Prada Symbole embroidered fabric mini bag&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;small envelope  in quilted grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;The Jewelled Hobo Mini Bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;30 Montaigne Micro Bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;By The Way Medium&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Dionysus small rectangular bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gucci Bamboo 1947 medium top handle bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Jackie 1961 mini shoulder bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Le Bambino long&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;medium kate  in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Mini flap bag, Lambskin &amp; gold-tone metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;neo cagole xs handbag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Sardine&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Small Cabas Phantom in soft grained calfskin&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Small Prada Galleria Saffiano leather bag&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_2766758297880793089:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Chanel 22 small handbag, Shiny calfskin &amp; gold-tone metal , light yellow — Fashion&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;GG Marmont mini shoulder bag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Gucci Horsebit 1955 mini bag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;lou  in quilted leather&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Medium Dior Bobby Bag&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Micro Luggage handbag in drummed calfskin&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Mini Dauphine&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Mini Jodie&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Mini Puzzle bag in satin calfskin&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Prada Moon padded nappa-leather bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;30 Montaigne Bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Alma BB&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Amazona 16 Square bag in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Aphrodite small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ava Bag in Triomphe Canvas and calfskin&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;cassandre matelassé chain wallet in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cassette&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Embroidered jacquard fabric mini-bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Gucci Blondie shoulder bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;hourglass small handbag box&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Jewelled Satchel&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Le Bambino&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Lola Clutch in Black - Women&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Small Dionysus top handle bag&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Small Dior Book Tote&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;small kate  in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Small Padded Cassette&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Capucines MM&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Chanel 19 large handbag, Shiny lambskin, gold-tone, silver-tone &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Classique 16 Bag in satinated calfskin&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Dionysus leather super mini bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Gucci Diana medium tote bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Large Dior Bobby Bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;large envelope  in quilted grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Large Flamenco clutch in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Le grand Chiquito&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Medium Cabat&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Medium Saffiano Leather Prada Matinée Bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;neo cagole city handbag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Small Lola Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;The Peak Bag&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;uptown chain wallet in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;le cagole xs bucket bag&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Le Chiquito long&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Mini TB Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;The Jewelled Hobo Mini Bag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Gucci Bamboo 1947 jumbo GG mini bag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Jackie 1961 small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Large Classic Handbag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Medium Lady Dior Bag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;medium loulou  in quilted leather&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MINI TRIOMPHE in Shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;OnTheGo MM&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Padded Cassette&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Small Prada Galleria Saffiano leather bag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;XL Flamenco bag in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Classic handbag, Lambskin &amp; gold-tone metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;GG Marmont small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Gucci Horsebit 1955 shoulder bag&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;loulou toy strap bag in quilted \&quot;y\&quot; leather&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Medium Dior Book Tote&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;MINI 16 in satinated calfskin&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Mini Loop Camera Bag&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;NéoNoé MM&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Paseo bag in shiny nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Prada Re-Edition 2005 Saffiano leather bag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Chanel 19 maxi handbag, Shiny lambskin, gold-tone, silver-tone &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Classique Triomphe Bag in shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Coussin BB&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Dionysus small rectangular bag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gucci Diana mini tote bag&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Large Dior Book Tote&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;large loulou  in quilted leather&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Medium Jodie&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mini Flamenco clutch in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Prada Cleo brushed leather mini bag&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;neo classic small handbag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Gucci Blondie mini bag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Ophidia large tote bag&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;sac de jour baby  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Saddle Micro Bag with Strap&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Small Jodie&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2.55 Handbag, Aged calfskin &amp; gold-tone metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;30 Montaigne Micro Bag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Alma PM&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Amazona 23 bag in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;BESACE CLEA in shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;cassandre matelassé envelope chain wallet in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Chain Cassette&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Dionysus GG Supreme mini bag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Gucci Blondie top-handle bag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Large Prada Galleria Saffiano leather bag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Small Dior Caro Bag&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;small loulou  in quilted leather&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Teen Jodie&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Gucci Bamboo 1947 small top handle bag&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Mini Saddle Bag with Strap&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;neo cagole xs handbag&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;niki baby  in vintage leather&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Ophidia GG small tote bag&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Small boy chanel handbag, Calfskin &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Small Cabat&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Small TB Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Teen Triomphe Bag in shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;The Slash Bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Chanel 22 handbag, Shiny calfskin &amp; gold-tone metal , black — Fashion&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Coussin MM&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Dionysus small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Gucci Diana small tote bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Large Dior Caro Bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;large sunset  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Medium Cabas Phantom in soft grained calfskin&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mini Arco Tote Bag&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mini Gate Dual bag in soft calfskin and jacquard&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Prada Cleo brushed leather shoulder bag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Gucci Bamboo 1947 jumbo GG small top handle bag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Maxi 2.55 Handbag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Medium Lady D-Joy Bag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;medium niki  in vintage leather&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Nano Luggage bag in drummed calfskin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Onthego PM&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Ophidia GG medium tote bag&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Pouch&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Small Prada Symbole embroidered fabric handbag&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Gucci Bamboo 1947 medium top handle bag&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Maxi Classic Handbag&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;medium puffer  in quilted nappa leather&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Mini Dior Book Tote&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Ophidia GG small handbag&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Sardine&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Small 16 Bag in satinated calfskin&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Twist MM&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Gucci Blondie medium bag&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Ophidia GG soft medium tote&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;rive gauche tote  in canvas&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Saddle Bag with Strap&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Small Cassette&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Small classic handbag, Grained calfskin &amp; gold-tone metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Wallet on Chain TRIOMPHE in Shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Gucci Blondie mini shoulder bag&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Ophidia medium tote bag&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Small Dior Bobby Bag&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;small envelope  in quilted grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Small Loop Camera Bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Gucci Attache medium shoulder bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Jackie 1961 medium shoulder bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Large 2.55 Handbag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;le cagole small bucket bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Le Chiquito&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Medium Dior Caro Bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;medium envelope  in quilted grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MINI AVA in Triomphe canvas and calfskin&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mini Lola Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mini Pouch&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Neverfull GM&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Prada Symbole embroidered fabric mini bag&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Small Hammock bag in soft grained calfskin&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;The Jewelled Hobo Bag&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;neo cagole city small handbag&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Small Lola Camera Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;The Peak Bag Small&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Chanel 22 large handbag, Shiny calfskin &amp; gold-tone metal , black — Fashion&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Dauphine MM&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;GG Marmont medium shoulder bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Gucci Horsebit 1955 medium bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Large Lady Dior Bag&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;le 5 à 7  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Micro Belt bag in grained calfskin&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mini Cabat&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mini Puffer Goya bag in shiny nappa lambskin&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Prada Cleo brushed leather shoulder bag with flap&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Boy chanel handbag, Calfskin &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;CABAS 16 in SMOOTH CALFSKIN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Capucines BB&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Compact Hammock bag in soft grained calfskin&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Dionysus GG Supreme super mini bag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;envelope chain wallet in mix matelassé grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Gucci Diana jumbo GG mini tote bag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;hourglass small handbag crocodile embossed&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Lady D-Joy Micro Bag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Large Prada Symbole embroidered fabric handbag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Le Bambino long&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Medium Andiamo&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Mini Frances Bag in Black - Women&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Mini Jewelled Satchel&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Small Lady Dior My ABCDior Bag&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;small puffer  in quilted nappa leather&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Gucci Bamboo 1947 mini top handle bag&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;medium sunset  in smooth leather&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Mini flap bag, Lambskin &amp; gold-tone metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Mini Lady Dior Bag&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Ophidia GG small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Small Arco Tote Bag&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Small Cabas Phantom in soft grained calfskin&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Twist PM&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Gucci Attache small shoulder bag&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Jackie 1961 mini shoulder bag&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Large boy chanel handbag, Calfskin &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;medium kate  in grain de poudre embossed leather&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Medium Lady D-Lite Bag&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Mini Belt bag in grained calfskin&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Mini Sardine&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Neverfull MM&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Re-Nylon Prada Re-Edition 2000 mini-bag&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Small Paseo bag in shiny nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;neo classic medium handbag&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;The Slash Clutch&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Women’s Designer Bags&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Capucines Mini&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;CHAIN SHOULDER BAG triomphe in shiny calfskin&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Chanel 19 handbag, Shiny lambskin, gold-tone, silver-tone &amp; ruthenium-finish metal, black — Fashion&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Dionysus leather mini bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Flamenco clutch in nappa calfskin&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gucci Diana jumbo GG small tote bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;icare maxi shopping bag in quilted lambskin&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Lady Dior Micro Bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Medium Arco Tote Bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Medium Prada Galleria Saffiano leather bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Small Lady D-Joy Bag&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;small sac de jour  in smooth leather&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_2824460668130164736:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Positive&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Negative&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;No Data&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Unnamed: 0' />
+        <field-sort-custom-order field='Brand_w' />
+        <field-sort-custom-order field='Name_w' />
+        <field-sort-custom-order field='SKU' />
+        <field-sort-custom-order field='Country' />
+        <field-sort-custom-order field='Price_w' />
+        <field-sort-custom-order field='Brand_w1' />
+        <field-sort-custom-order field='Name_w1' />
+        <field-sort-custom-order field='Price_w1' />
+        <field-sort-custom-order field='Calculation_2738258956460986370' />
+        <field-sort-custom-order field='Price_Diff' />
+        <field-sort-custom-order field='Price Pct Change' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field='Calculation_2738258956459102209' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Country' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;USA (tax free)&quot;'>
+          <calculation class='tableau' formula='&quot;USA (tax free)&quot;' />
+        </column>
+        <column caption='Select Brand' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bottega Veneta&quot;'>
+          <calculation class='tableau' formula='&quot;Bottega Veneta&quot;' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_D9B36D356705411CA4C9233B965D4DFF'>
+            <properties context=''>
+              <relation connection='excel-direct.02sqe0d06pkpc9106p69o109t16p' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:K4843:no:A1:K4843:0' header='yes' outcome='2'>
+                  <column datatype='integer' name='Unnamed: 0' ordinal='0' />
+                  <column datatype='string' name='Brand_w' ordinal='1' />
+                  <column datatype='string' name='Name_w' ordinal='2' />
+                  <column datatype='string' name='SKU' ordinal='3' />
+                  <column datatype='string' name='Country' ordinal='4' />
+                  <column datatype='integer' name='Price_w' ordinal='5' />
+                  <column datatype='string' name='Brand_w1' ordinal='6' />
+                  <column datatype='string' name='Name_w1' ordinal='7' />
+                  <column datatype='integer' name='Price_w1' ordinal='8' />
+                  <column datatype='integer' name='Price_Diff' ordinal='9' />
+                  <column datatype='integer' name='Price Pct Change' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Processed_data)' name='federated.1lxame813gh7p710zvrcm04mo84e' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1lxame813gh7p710zvrcm04mo84e'>
+            <column caption='Current Week(Null Count)' datatype='integer' name='[Calculation_2738258956459102209]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Price_w]=0 THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Last Week(Null Count)' datatype='integer' name='[Calculation_2738258956460986370]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if [Price_w1]=0 then 1 else 0 END' />
+            </column>
+            <column caption='Price w1' datatype='integer' name='[Price_w1]' role='measure' type='quantitative' />
+            <column caption='Price w' datatype='integer' name='[Price_w]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2738258956459102209]' derivation='Sum' name='[sum:Calculation_2738258956459102209:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2738258956460986370]' derivation='Sum' name='[sum:Calculation_2738258956460986370:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1lxame813gh7p710zvrcm04mo84e].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956459102209:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956460986370:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1lxame813gh7p710zvrcm04mo84e].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956460986370:qk]' value='n#,##0;-#,##0' />
+            <format attr='text-format' field='[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956459102209:qk]' value='n#,##0;-#,##0' />
+            <format attr='font-size' value='12' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='color' value='#4e79a7' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' scope='cols' value='15' />
+            <format attr='font-style' scope='cols' value='italic' />
+            <format attr='font-weight' scope='cols' value='normal' />
+            <format attr='font-family' scope='cols' value='Tableau Bold' />
+            <format attr='color' scope='rows' value='#000000' />
+            <format attr='font-size' scope='rows' value='12' />
+            <format attr='font-family' scope='rows' value='Tableau Book' />
+            <format attr='color' scope='cols' value='#000000' />
+            <format attr='display' field='[federated.1lxame813gh7p710zvrcm04mo84e].[:Measure Names]' value='false' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#ffffff' />
+            <format attr='background-color' data-class='total' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='band-size' scope='cols' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1lxame813gh7p710zvrcm04mo84e].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1lxame813gh7p710zvrcm04mo84e].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{FADDA2F6-069B-47EA-8636-327ACC27BCFA}' />
+    </worksheet>
+    <worksheet name='Missing Price Last Week vs Current Week Count'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Processed_data)' name='federated.1lxame813gh7p710zvrcm04mo84e' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1lxame813gh7p710zvrcm04mo84e'>
+            <column caption='Current Week(Null Count)' datatype='integer' name='[Calculation_2738258956459102209]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Price_w]=0 THEN 1 ELSE 0 END' />
+            </column>
+            <column caption='Last Week(Null Count)' datatype='integer' name='[Calculation_2738258956460986370]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if [Price_w1]=0 then 1 else 0 END' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Price w1' datatype='integer' name='[Price_w1]' role='measure' type='quantitative' />
+            <column caption='Price w' datatype='integer' name='[Price_w]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2738258956459102209]' derivation='Sum' name='[sum:Calculation_2738258956459102209:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2738258956460986370]' derivation='Sum' name='[sum:Calculation_2738258956460986370:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956459102209:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956459102209:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956460986370:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1lxame813gh7p710zvrcm04mo84e].[none:Country:nk]</rows>
+        <cols>([federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956459102209:qk] + [federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956460986370:qk])</cols>
+      </table>
+      <simple-id uuid='{38E144DA-4F3D-43A6-9823-405A8B109583}' />
+    </worksheet>
+    <worksheet name='Percentage Pie Chart'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Processed_data)' name='federated.1lxame813gh7p710zvrcm04mo84e' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Country' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;USA (tax free)&quot;'>
+              <calculation class='tableau' formula='&quot;USA (tax free)&quot;' />
+            </column>
+            <column caption='Select Brand' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bottega Veneta&quot;'>
+              <calculation class='tableau' formula='&quot;Bottega Veneta&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1lxame813gh7p710zvrcm04mo84e'>
+            <column caption='Brand w' datatype='string' name='[Brand_w]' role='dimension' type='nominal' />
+            <column caption='Country-Brand-Calculated-Field' datatype='string' name='[Calculation_2766758297880793089]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 2] = [Brand_w] and [Parameters].[Parameter 1]= [Country] THEN [Name_w]&#10;ELSE NULL&#10;END' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Name w' datatype='string' name='[Name_w]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Price Pct Change]' role='measure' type='quantitative' />
+            <column-instance column='[Price Pct Change]' derivation='Avg' name='[avg:Price Pct Change:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2766758297880793089]' derivation='None' name='[none:Calculation_2766758297880793089:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_2766758297880793089:nk]' />
+              <groupfilter function='member' level='[none:Calculation_2766758297880793089:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]' direction='ASC' using='[federated.1lxame813gh7p710zvrcm04mo84e].[avg:Price Pct Change:qk]' />
+          <slices>
+            <column>[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1lxame813gh7p710zvrcm04mo84e].[avg:Price Pct Change:qk]' value='p0%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1lxame813gh7p710zvrcm04mo84e].[avg:Price Pct Change:qk]' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]' />
+              <wedge-size column='[federated.1lxame813gh7p710zvrcm04mo84e].[avg:Price Pct Change:qk]' />
+              <text column='[federated.1lxame813gh7p710zvrcm04mo84e].[avg:Price Pct Change:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0ED684E9-B3EA-4E2A-AE5E-0332F0611931}' />
+    </worksheet>
+    <worksheet name='Price-Diff'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Processed_data)' name='federated.1lxame813gh7p710zvrcm04mo84e' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Select Country' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;USA (tax free)&quot;'>
+              <calculation class='tableau' formula='&quot;USA (tax free)&quot;' />
+            </column>
+            <column caption='Select Brand' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bottega Veneta&quot;'>
+              <calculation class='tableau' formula='&quot;Bottega Veneta&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1lxame813gh7p710zvrcm04mo84e'>
+            <column caption='Brand w' datatype='string' name='[Brand_w]' role='dimension' type='nominal' />
+            <column caption='Country-Brand-Calculated-Field' datatype='string' name='[Calculation_2766758297880793089]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 2] = [Brand_w] and [Parameters].[Parameter 1]= [Country] THEN [Name_w]&#10;ELSE NULL&#10;END' />
+            </column>
+            <column caption='Prize-Diff-Color' datatype='string' name='[Calculation_2824460668130164736]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='if [Price_Diff] &gt;= 0 then &quot;Positive&quot; else &quot;Negative&quot; end' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Name w' datatype='string' name='[Name_w]' role='dimension' type='nominal' />
+            <column caption='Price Diff' datatype='integer' name='[Price_Diff]' role='measure' type='quantitative' />
+            <column-instance column='[Price_Diff]' derivation='Avg' name='[avg:Price_Diff:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2766758297880793089]' derivation='None' name='[none:Calculation_2766758297880793089:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2824460668130164736]' derivation='None' name='[none:Calculation_2824460668130164736:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Calculation_2766758297880793089:nk]' />
+              <groupfilter function='member' level='[none:Calculation_2766758297880793089:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1lxame813gh7p710zvrcm04mo84e].[avg:Price_Diff:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1lxame813gh7p710zvrcm04mo84e].[avg:Price_Diff:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2824460668130164736:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]</rows>
+        <cols>[federated.1lxame813gh7p710zvrcm04mo84e].[avg:Price_Diff:qk]</cols>
+      </table>
+      <simple-id uuid='{23EC4DFB-51FA-4E1A-8C12-3A6EE0A89C4E}' />
+    </worksheet>
+    <worksheet name='w1 missing total count'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Processed_data)' name='federated.1lxame813gh7p710zvrcm04mo84e' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1lxame813gh7p710zvrcm04mo84e'>
+            <column caption='Last Week(Null Count)' datatype='integer' name='[Calculation_2738258956460986370]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if [Price_w1]=0 then 1 else 0 END' />
+            </column>
+            <column caption='Price w1' datatype='integer' name='[Price_w1]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2738258956460986370]' derivation='Sum' name='[sum:Calculation_2738258956460986370:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='72' />
+            <format attr='width' value='199' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956460986370:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Total Count(w1)&#10;&lt;</run>
+                <run>[federated.1lxame813gh7p710zvrcm04mo84e].[sum:Calculation_2738258956460986370:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CF08D47D-9735-42C1-B02C-5123D8EE7456}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard'>
+      <style />
+      <size maxheight='900' maxwidth='1580' minheight='560' minwidth='1220' sizing-mode='range' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Select Country' datatype='string' datatype-customized='true' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;USA (tax free)&quot;'>
+          <calculation class='tableau' formula='&quot;USA (tax free)&quot;' />
+          <members>
+            <member value='&quot;France&quot;' />
+            <member value='&quot;Australia&quot;' />
+            <member value='&quot;United Kingdom&quot;' />
+            <member value='&quot;USA (tax free)&quot;' />
+            <member value='&quot;Japan&quot;' />
+            <member value='&quot;Hong Kong&quot;' />
+            <member value='&quot;China&quot;' />
+            <member value='&quot;Korea&quot;' />
+            <member value='&quot;Korea DF&quot;' />
+            <member value='&quot;Hainan DF&quot;' />
+            <member value='&quot;United Arab Emirates&quot;' />
+            <member value='&quot;Canada&quot;' />
+            <member value='&quot;Macao&quot;' />
+            <member value='&quot;Mexico&quot;' />
+            <member value='&quot;Saudi Arabia&quot;' />
+            <member value='&quot;Singapore&quot;' />
+            <member value='&quot;Thailand&quot;' />
+            <member value='&quot;Taiwan&quot;' />
+          </members>
+        </column>
+        <column caption='Select Brand' datatype='string' name='[Parameter 2]' param-domain-type='list' role='measure' type='nominal' value='&quot;Bottega Veneta&quot;'>
+          <calculation class='tableau' formula='&quot;Bottega Veneta&quot;' />
+          <members>
+            <member value='&quot;Alexander McQueen&quot;' />
+            <member value='&quot;Balenciaga&quot;' />
+            <member value='&quot;Bottega Veneta&quot;' />
+            <member value='&quot;Burberry&quot;' />
+            <member value='&quot;Celine&quot;' />
+            <member value='&quot;Chanel&quot;' />
+            <member value='&quot;Dior&quot;' />
+            <member value='&quot;Fendi&quot;' />
+            <member value='&quot;Goyard&quot;' />
+            <member value='&quot;Gucci&quot;' />
+            <member value='&quot;Jacquemus&quot;' />
+            <member value='&quot;Loewe&quot;' />
+            <member value='&quot;Louis Vuitton&quot;' />
+            <member value='&quot;Prada&quot;' />
+            <member value='&quot;Saint Laurent&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98214' id='15' param='horz' type-v2='layout-flow' w='98988' x='506' y='893'>
+            <zone h='98214' id='10' param='horz' type-v2='layout-flow' w='88861' x='506' y='893'>
+              <zone h='98214' id='8' type-v2='layout-basic' w='88861' x='506' y='893' />
+            </zone>
+            <zone fixed-size='160' h='98214' id='14' is-fixed='true' param='vert' type-v2='layout-flow' w='10127' x='89367' y='893'>
+              <zone h='5134' id='16' name='Price-Diff' pane-specification-id='0' param='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2824460668130164736:nk]' type-v2='color' w='10127' x='89367' y='893'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5804' id='17' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10127' x='89367' y='6027'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5804' id='18' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='10127' x='89367' y='11831'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='52009' id='21' name='Percentage Pie Chart' pane-specification-id='0' param='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]' type-v2='color' w='10127' x='89367' y='17635'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='30868' id='20' name='Percentage Pie Chart' show-title='false' w='29627' x='56871' y='19915' />
+        <zone h='63442' id='12' name='Missing Price Last Week vs Current Week Count' show-title='false' w='86259' x='397' y='46088' />
+        <zone h='13087' id='11' name='KPI' show-title='false' w='21446' x='61160' y='9388' />
+        <zone h='40114' id='13' name='Price-Diff' show-title='false' w='54964' x='794' y='13371' />
+        <zone forceUpdate='true' h='6686' id='19' type-v2='text' w='63940' x='10802' y='3414'>
+          <formatted-text>
+            <run bold='true' fontcolor='#4e79a7' fontname='Benton Sans Book' fontsize='28'>Weekly Price Change &amp; Anomaly Dashboard</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='4552' id='22' type-v2='text' w='21128' x='61319' y='9815'>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Bold' fontsize='15'>Current Week   Last Week</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='24' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98214' id='23' param='vert' type-v2='layout-flow' w='98988' x='506' y='893'>
+                <zone forceUpdate='true' h='6686' id='19' type-v2='text' w='63940' x='10802' y='3414'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#4e79a7' fontname='Benton Sans Book' fontsize='28'>Weekly Price Change &amp; Anomaly Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5804' id='17' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='10127' x='89367' y='6027'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='118' h='13087' id='11' is-fixed='true' name='KPI' show-title='false' w='21446' x='61160' y='9388'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4552' id='22' type-v2='text' w='21128' x='61319' y='9815'>
+                  <formatted-text>
+                    <run bold='true' fontname='Tableau Bold' fontsize='15'>Current Week   Last Week</run>
+                    <run>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5804' id='18' mode='compact' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='10127' x='89367' y='11831'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40114' id='13' is-fixed='true' name='Price-Diff' show-title='false' w='54964' x='794' y='13371'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5134' id='16' name='Price-Diff' pane-specification-id='0' param='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2824460668130164736:nk]' type-v2='color' w='10127' x='89367' y='893'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='278' h='30868' id='20' is-fixed='true' name='Percentage Pie Chart' show-title='false' w='29627' x='56871' y='19915'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='52009' id='21' name='Percentage Pie Chart' pane-specification-id='0' param='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]' type-v2='color' w='10127' x='89367' y='17635'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='63442' id='12' is-fixed='true' name='Missing Price Last Week vs Current Week Count' show-title='false' w='86259' x='397' y='46088'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B2AB68B7-EF8A-49C5-AA7D-2F3E7A84142F}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Missing Price Last Week vs Current Week Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{11FFCF56-A549-4B9D-B486-8CB444C799FA}' />
+    </window>
+    <window class='worksheet' name='KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6EDD02CF-B925-49C2-B3CF-9F7C22525C8B}' />
+    </window>
+    <window class='worksheet' name='w1 missing total count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{617B30D6-BB00-413E-A86F-396E94A8DB12}' />
+    </window>
+    <window class='worksheet' name='Price-Diff'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2824460668130164736:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FDC965D1-ABC7-4369-945D-D84C49020EA9}' />
+    </window>
+    <window class='worksheet' name='Percentage Pie Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1lxame813gh7p710zvrcm04mo84e].[none:Calculation_2766758297880793089:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{66BE4334-4273-4500-93AA-3A81E190B523}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard'>
+      <viewpoints>
+        <viewpoint name='KPI'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Missing Price Last Week vs Current Week Count' />
+        <viewpoint name='Percentage Pie Chart'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Price-Diff' />
+      </viewpoints>
+      <active id='18' />
+      <simple-id uuid='{A3440562-E687-4D33-911F-0584FBE97913}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Dashboard' width='384'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
